@@ -27,12 +27,16 @@ main {
   }
 }
 /* CUSTOM CSS DESIGNING FROM HERE */
-header h1 {
+.logo {
   text-align: center;
   border-bottom: 4px solid black;
-  font-size: 36px;
+}
+body header .logo svg {
+  width: 365px;
+  height: auto;
   padding: 15px 0;
 }
+/* NAV/LINK STYLE */
 header nav {
   text-align: center;
   position: fixed;
@@ -41,7 +45,6 @@ header nav {
   width: 100%;
   border-top: 4px solid black;
 }
-/* NAVLINK STYLE */
 header a {
   flex: auto;
 }
@@ -51,7 +54,9 @@ header a:link {
 header a:visited {
   color: initial;
 }
-header div:hover {
+.navHome:hover,
+.navBookmark:hover,
+.navUser:hover {
   background-color: chartreuse;
 }
 header nav a div {
