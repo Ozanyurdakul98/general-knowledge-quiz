@@ -14,7 +14,9 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
-
+main {
+  margin-bottom: 150px;
+}
 /* MEDIA QUERY STYLES */
 @media screen and (max-width: 480px) {
   main .cardSection {
@@ -39,7 +41,7 @@ header nav {
   width: 100%;
   border-top: 4px solid black;
 }
-/* LINK STYLE */
+/* NAVLINK STYLE */
 header a {
   flex: auto;
 }
@@ -115,6 +117,24 @@ header nav a div {
   margin-bottom: 80px;
 }
 .answerButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.hideButton {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #4caf50; /* Green */
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  padding: 10px 5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+.hideButton:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
