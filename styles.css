@@ -13,11 +13,6 @@ body {
   height: 100%;
   padding: 0px;
   overflow-x: hidden;
-}
-main {
-  margin-bottom: 150px;
-}
-body {
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 0, 0.5),
@@ -28,6 +23,10 @@ body {
   background-clip: content-box;
   background-repeat: repeat;
 }
+main {
+  margin-bottom: 150px;
+}
+
 /* MEDIA QUERY STYLES */
 @media screen and (max-width: 480px) {
   main .cardSection {
@@ -57,6 +56,15 @@ header nav {
   border-top: 4px solid black;
   background-color: white;
   z-index: 10;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 0, 0.5),
+      rgba(0, 0, 255, 0.5)
+    ),
+    url("./images/Zeichnung-cropped.svg");
+  background-size: 70px;
+  background-clip: content-box;
+  background-repeat: repeat;
 }
 header a {
   flex: auto;
