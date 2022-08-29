@@ -80,7 +80,8 @@ header nav a div {
   align-items: center;
   margin-top: 50px;
   position: relative;
-  border: 2px solid black;
+  border: 5px solid black;
+  border-radius: 10px;
   z-index: 1;
   max-width: 325px;
   width: 80%;
@@ -88,25 +89,27 @@ header nav a div {
 .cardBookmark {
   /* text-align: end; */
   position: absolute;
-  right: 5px;
-  top: -15px;
+  right: -18px;
+  top: -20px;
   z-index: 10;
   color: red;
   font-size: 50px;
   border: none;
-  background-color: white;
+  background-color: transparent;
   padding: 0;
 }
 .cardBookmark i {
   background-color: white;
+  height: 40px;
 }
+
 .quizTitle {
   font-size: 25px;
   text-align: center;
   padding: 0 10px;
   margin-top: 55px;
 }
-
+/* CARD BUTTON STYLE */
 .answerButton {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #4caf50; /* Green */
@@ -127,7 +130,7 @@ header nav a div {
 }
 .hideButton {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #4caf50; /* Green */
+  background-color: #4caf; /* Green */
   border-radius: 10px;
   border: 0;
   color: white;
