@@ -14,6 +14,16 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
+
+/* MEDIA QUERY STYLES */
+@media screen and (max-width: 480px) {
+  main .cardSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
 /* CUSTOM CSS DESIGNING FROM HERE */
 header h1 {
   text-align: center;
@@ -54,7 +64,7 @@ header nav a div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .card {
@@ -83,6 +93,7 @@ header nav a div {
 .card p {
   font-size: 25px;
   text-align: center;
+  padding: 0 10px;
   margin-top: 55px;
 }
 
