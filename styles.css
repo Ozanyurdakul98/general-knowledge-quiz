@@ -17,6 +17,10 @@ body {
 main {
   margin-bottom: 150px;
 }
+body {
+  background-image: url("./images/Zeichnung.svg");
+  background-repeat: repeat;
+}
 /* MEDIA QUERY STYLES */
 @media screen and (max-width: 480px) {
   main .cardSection {
@@ -30,6 +34,7 @@ main {
 .logo {
   text-align: center;
   border-bottom: 4px solid black;
+  background-color: #f4d7d7;
 }
 body header .logo svg {
   width: 365px;
@@ -38,16 +43,18 @@ body header .logo svg {
 }
 /* NAV/LINK STYLE */
 header nav {
-  text-align: center;
   position: fixed;
   display: flex;
   bottom: 0;
   width: 100%;
   border-top: 4px solid black;
+  background-color: white;
+  z-index: 10;
 }
 header a {
   flex: auto;
 }
+
 header a:link {
   color: black;
 }
@@ -57,13 +64,22 @@ header a:visited {
 .navHome:hover,
 .navBookmark:hover,
 .navUser:hover {
-  background-color: chartreuse;
+  color: rgba(0, 0, 0, 0.181);
 }
+.button-active-home {
+  background-color: #ffff00;
+}
+.button-active-bookmark {
+  background-color: #008080;
+}
+.button-active-user {
+  background-color: #ff6600;
+}
+
 header nav a div {
   text-align: center;
   font-size: 36px;
   padding: 15px 0;
-  flex: auto;
 }
 
 /* CARD STYLE */
@@ -82,6 +98,7 @@ header nav a div {
   margin-top: 50px;
   position: relative;
   border: 5px solid black;
+  background-color: #ffb380;
   border-radius: 10px;
   z-index: 1;
   max-width: 325px;
@@ -94,7 +111,7 @@ header nav a div {
   right: -18px;
   top: -20px;
   z-index: 10;
-  color: red;
+  color: #d40000;
   font-size: 50px;
   border: none;
   background-color: transparent;
@@ -116,7 +133,7 @@ header nav a div {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #f4d7d7;
   width: 70%;
   height: 150px;
   margin: 10px 0;
@@ -125,10 +142,10 @@ header nav a div {
 /* CARD BUTTON STYLE */
 .answerButton {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #4caf50; /* Green */
+  background-color: #00ffff; /* Green */
   border-radius: 10px;
   border: 0;
-  color: white;
+  color: black;
   padding: 10px 5vw;
   text-align: center;
   text-decoration: none;
@@ -142,7 +159,7 @@ header nav a div {
 }
 .hideButton {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #4caf; /* Green */
+  background-color: #d40000; /* Green */
   border-radius: 10px;
   border: 0;
   color: white;
@@ -185,19 +202,22 @@ header nav a div {
   font-family: sans-serif;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 .cardTags a:hover {
   text-decoration: underline;
 }
 .yellow {
-  background-color: goldenrod;
+  background-color: #ffff00;
+  color: black;
 }
 .blue {
-  background-color: royalblue;
+  background-color: #00ffff;
+  color: black;
 }
 .green {
-  background-color: seagreen;
+  background-color: #008080;
 }
 .red {
-  background-color: #df2d4f;
+  background-color: #d40000;
 }
