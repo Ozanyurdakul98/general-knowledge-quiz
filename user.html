@@ -14,22 +14,31 @@
 
   <body>
     <header>
-      <div class="logo">
-        <img src="./images/Zeichnung-cropped.svg" />
+      <div class="header__logo">
+        <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
       </div>
-      <nav>
-        <a href="index.html">
-          <div class="navHome">
-            <i class="fa-solid fa-house-user"></i>
-          </div>
-        </a>
-        <a href="bookmark.html">
-          <div class="navBookmark"><i class="fa-solid fa-bookmark"></i></div
-        ></a>
-        <a href="user.html">
-          <div class="navUser button-active-user">
-            <i class="fa-solid fa-user"></i></div
-        ></a>
+      <nav class="header__navbar">
+        <ul class="header__navbar__liste">
+          <li class="header__navbar__liste__items">
+            <a href="index.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link__div">
+                <i class="fa-solid fa-house-user"></i>
+              </div>
+            </a>
+          </li>
+          <li class="header__navbar__liste__items">
+            <a href="bookmark.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link__div">
+                <i class="fa-solid fa-bookmark"></i></div
+            ></a>
+          </li>
+          <li class="header__navbar__liste__items">
+            <a href="user.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link--UserIsActive">
+                <i class="fa-solid fa-user"></i></div
+            ></a>
+          </li>
+        </ul>
       </nav>
     </header>
 

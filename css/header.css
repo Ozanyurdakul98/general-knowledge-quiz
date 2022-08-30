@@ -1,0 +1,78 @@
+.header__logo {
+  text-align: center;
+  border-bottom: 4px solid black;
+  background-color: white;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(247, 247, 245, 0.5),
+      rgba(245, 245, 249, 0.704)
+    ),
+    url("../images/Zeichnung-cropped.svg");
+  background-size: 90px;
+  background-clip: content-box;
+  background-repeat: repeat;
+}
+.header__logo__img {
+  width: 365px;
+  height: auto;
+  padding: 15px 0;
+}
+
+.header__navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 4px solid black;
+  background-color: white;
+  z-index: 10;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(247, 247, 245, 0.5),
+      rgba(245, 245, 249, 0.704)
+    ),
+    url("../images/Zeichnung-cropped.svg");
+  background-size: 30px;
+  background-clip: content-box;
+  background-repeat: repeat;
+}
+
+.header__navbar__liste {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.header__navbar__liste__items {
+  flex: auto;
+}
+
+.header__navbar__liste__items__link:link {
+  color: black;
+}
+
+.header__navbar__liste__items__link:visited {
+  color: initial;
+}
+.header__navbar__liste__items__link:hover,
+.header__navbar__liste__items__link:hover,
+.header__navbar__liste__items__link:hover {
+  color: rgba(0, 0, 0, 0.181);
+}
+
+.header__navbar__liste__items__link--HomeIsActive {
+  background-color: #ffff00;
+}
+.header__navbar__liste__items__link--BookmarkIsActive {
+  background-color: #008080;
+}
+.header__navbar__liste__items__link--UserIsActive {
+  background-color: #ff6600;
+}
+
+.header__navbar__liste__items__link__div,
+.header__navbar__liste__items__link--HomeIsActive,
+.header__navbar__liste__items__link--BookmarkIsActive,
+.header__navbar__liste__items__link--UserIsActive {
+  text-align: center;
+  font-size: 36px;
+  padding: 15px 0;
+}

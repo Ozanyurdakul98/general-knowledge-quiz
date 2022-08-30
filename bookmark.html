@@ -14,57 +14,132 @@
 
   <body>
     <header>
-      <div class="logo">
-        <img src="./images/Zeichnung-cropped.svg" />
+      <div class="header__logo">
+        <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
       </div>
-      <nav>
-        <a href="index.html">
-          <div class="navHome">
-            <i class="fa-solid fa-house-user"></i>
-          </div>
-        </a>
-        <a href="bookmark.html">
-          <div class="navBookmark button-active-bookmark">
-            <i class="fa-regular fa-bookmark"></i></div
-        ></a>
-        <a href="user.html">
-          <div class="navUser"><i class="fa-solid fa-user"></i></div
-        ></a>
+      <nav class="header__navbar">
+        <ul class="header__navbar__liste">
+          <li class="header__navbar__liste__items">
+            <a href="index.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link__div">
+                <i class="fa-solid fa-house-user"></i>
+              </div>
+            </a>
+          </li>
+          <li class="header__navbar__liste__items">
+            <a href="bookmark.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link--BookmarkIsActive">
+                <i class="fa-solid fa-bookmark"></i></div
+            ></a>
+          </li>
+          <li class="header__navbar__liste__items">
+            <a href="user.html" class="header__navbar__liste__items__link">
+              <div class="header__navbar__liste__items__link__div">
+                <i class="fa-solid fa-user"></i></div
+            ></a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section class="cardSection">
-        <div class="card">
-          <button class="cardBookmarkSaved">
+      <section class="card-section">
+        <div class="card-section__card">
+          <button class="card-section__card__bookmark--saved">
             <i class="fa-solid fa-bookmark"></i>
           </button>
-          <div class="quizTitle">
+          <div class="card-section__card__question">
             <p>What is the current population size of Germany?</p>
           </div>
-          <div class="cardButtonContainer">
-            <a href="www.google.de" class="answerButton"> Show Answer </a>
+          <div class="card-section__card__button">
+            <a href="www.google.de" class="card-section__card__button__link">
+              Show Answer
+            </a>
           </div>
-          <div class="cardTagsSection">
-            <div class="cardTagsTitle"><p>Tags:</p></div>
-            <div class="cardTags">
-              <ul>
-                <li>
-                  <a href="http://lostthecow.com" class="tag yellow">
-                    Javascript</a
-                  >
-                </li>
-                <li>
-                  <a href="http://lostthecow.com" class="tag red"> Ruby</a>
-                </li>
-                <li>
-                  <a href="http://lostthecow.com" class="tag blue"> CSS</a>
-                </li>
-                <li>
-                  <a href="http://lostthecow.com" class="tag green"> HTML</a>
-                </li>
-              </ul>
-            </div>
+          <div class="card-section__card__tags-container">
+            <ul class="card-section__card__tags-container__list">
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link yellow"
+                >
+                  Javascript</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link red"
+                >
+                  Ruby</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link blue"
+                >
+                  CSS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link green"
+                >
+                  HTML</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-section__card">
+          <button class="card-section__card__bookmark--saved">
+            <i class="fa-solid fa-bookmark"></i>
+          </button>
+          <div class="card-section__card__question">
+            <p>What is the current population size of Germany?</p>
+          </div>
+          <div class="card-section__card__button">
+            <a href="www.google.de" class="card-section__card__button__link">
+              Show Answer
+            </a>
+          </div>
+          <div class="card-section__card__tags-container">
+            <ul class="card-section__card__tags-container__list">
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link yellow"
+                >
+                  Javascript</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link red"
+                >
+                  Ruby</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link blue"
+                >
+                  CSS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://lostthecow.com"
+                  class="card-section__card__tags-container__list__item__link green"
+                >
+                  HTML</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>
