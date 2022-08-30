@@ -31,11 +31,18 @@ main {
 }
 
 /* let */
+.foto {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .flex {
   display: flex;
+  margin: 0 auto;
   margin-top: 50px;
-  background-color: white;
   max-height: 160px;
+  max-width: 70%;
 }
 .foto div div {
   display: flex;
@@ -54,7 +61,7 @@ main {
   max-height: 50%;
   flex-grow: 1;
   font-weight: 900;
-  font-size: 8vw;
+  font-size: 25px;
   align-self: center;
 }
 .user {
