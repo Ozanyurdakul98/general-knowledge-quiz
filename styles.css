@@ -29,16 +29,46 @@ body {
 main {
   margin-bottom: 150px;
 }
-.information-s__img-name-c {
+
+/* let */
+.flex {
   display: flex;
+  margin-top: 50px;
+  background-color: white;
+  max-height: 160px;
+}
+.foto div div {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  max-width: 50%;
 }
-.information-s__img-name-c__name-c__name {
-  font-size: 30px;
-}
-.information-s__img-name-c__avatar__image {
-  vertical-align: middle;
-  width: 180px;
-  height: 180px;
+.foto div img {
+  width: 25%;
+  height: 75%;
+  aspect-ratio: 1/1;
   border-radius: 50%;
+}
+.pp {
+  max-width: 50%;
+  max-height: 50%;
+  flex-grow: 1;
+  font-weight: 900;
+  font-size: 8vw;
+  align-self: center;
+}
+.user {
+  background-color: white;
+}
+.text {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: white;
+}
+.counter {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: white;
 }
