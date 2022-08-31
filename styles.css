@@ -26,8 +26,15 @@ body {
   background-clip: content-box;
   background-repeat: repeat;
 }
-main {
-  margin-bottom: 150px;
+
+.body-s {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 150px 1fr 75px;
+  margin: 0;
+}
+.main-s {
+  overflow-y: auto;
 }
 
 /* BEreich FOTO NAME */
