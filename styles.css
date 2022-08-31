@@ -25,7 +25,7 @@ body {
   margin: 0;
 }
 .main-s {
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 /* BEreich FOTO NAME */
