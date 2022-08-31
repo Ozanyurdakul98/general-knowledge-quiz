@@ -30,43 +30,40 @@ main {
   margin-bottom: 150px;
 }
 
-/* let */
-.foto {
+/* BEreich FOTO NAME */
+.fotoName-s {
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .flex {
   display: flex;
-  margin: 0 auto;
-  margin-top: 50px;
-  max-height: 160px;
-  max-width: 70%;
-}
-.foto div div {
-  display: flex;
-  justify-content: center;
+  max-height: 220px;
+  padding: 10px 0;
   align-items: center;
-  max-width: 50%;
+  max-width: 80%;
+  width: 850px;
 }
-.foto div img {
-  width: 25%;
-  height: 75%;
-  aspect-ratio: 1/1;
+.fotoName-s div img {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
 }
+.imgflex {
+  display: flex;
+  flex: 1;
+}
 .pp {
-  max-width: 50%;
-  max-height: 50%;
-  flex-grow: 1;
   font-weight: 900;
   font-size: 25px;
   align-self: center;
+  flex: 1;
 }
-.user {
-  background-color: white;
-}
+
+/* BEREICH ABOUTME UND COUNTER */
+
 .text {
   width: 80%;
   margin: 0 auto;
