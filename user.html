@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>That's My Quiz</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/aboutMe.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/header.css" />
     <script
       src="https://kit.fontawesome.com/1ea256a700.js"
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body class="body-s">
-    <header>
+    <header class="header">
       <div class="header__logo">
         <h1 style="font-size: 2px; margin: 0px">
           That's My Quiz by Ozan Leon Yurdakul
@@ -21,19 +23,25 @@
         <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
       </div>
     </header>
-    <main class="main-s">
+    <main class="body-s__main-s">
+      <header class="headerMobile">
+        <div class="header__logo">
+          <h1 style="font-size: 2px; margin: 0px">
+            That's My Quiz by Ozan Leon Yurdakul
+          </h1>
+          <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
+        </div>
+      </header>
       <section class="fotoName-s">
         <div class="flex">
           <div class="imgflex"><img src="./images/avatar.jpg" /></div>
           <div class="pp"><p>Ozan Leon Yurdakul</p></div>
         </div>
       </section>
-      <section class="container">
-        <div class="text">
+      <section class="about-s">
+        <div class="about-s__text-c">
           <h3>About me</h3>
-          <p
-            class="information-s__aboutMe+counter-s__aboutMe+counter-c__description"
-          >
+          <p class="about-s__text-c--paragraph1">
             I am a aspiring Web Developer Student currently (August 2022) at the
             Bootcamp of Neuefische. This project is our first big recap
             projects. It is a Quiz Application, where you have Quiz Cards with
@@ -45,9 +53,7 @@
             Counter for the amount of Question Cards and also th amount of cards
             you have bookmarked.
           </p>
-          <p
-            class="information-s__aboutMe+counter-s__aboutMe+counter-c__description"
-          >
+          <p class="about-s__text-c--paragraph2">
             About this project i love the most, the cool design structure i will
             now use more often per default. I have for exampe, put in the home
             page area the body element in a grid layout with 3 defined rows for
@@ -59,9 +65,27 @@
             footer) won't be anything.
           </p>
         </div>
-        <div class="counter">
+        <div class="about-s__counter-c">
           <p>Icon: Question-Counter</p>
           <p>Icon: Bookmark-Counter</p>
+        </div>
+        <div class="about-s__settings-c">
+          <h3>Settings</h3>
+          <div class="about-s__settings-c-c">
+            <div class="about-s__settings-c__darkMode-c">
+              <h4>Dark Mode</h4>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="about-s__settings-c__resetBookmark-c">
+              <h4>Reset Bookmarks</h4>
+              <button class="about-s__settings-c__resetBookmark-c--button">
+                Reset
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
