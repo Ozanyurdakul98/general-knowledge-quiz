@@ -41,16 +41,7 @@
   background-color: transparent;
 }
 .card-section__card__bookmark--saved {
-  /* text-align: end; */
-  position: absolute;
-  right: -18px;
-  top: -20px;
-  z-index: 10;
   color: #d40000;
-  font-size: 50px;
-  border: none;
-  background-color: transparent;
-  padding: 0;
 }
 
 .card-section__card__question {
@@ -149,4 +140,45 @@
 }
 .red {
   background-color: #d40000;
+}
+.body-s__main-s__createQuiz-s {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+.body-s__main-s__createQuiz-s__createQuiz-c {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.body-s__main-s__createQuiz-s__h2Div {
+  font-size: 35px;
+  text-align: center;
+}
+.createCardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+legend {
+  font-size: 25px;
+  color: orangered;
+}
+
+@media (max-width: 600px) {
+  .body-s__main-s__createQuiz-s__createQuiz-c {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }

@@ -37,6 +37,7 @@
   align-items: center;
   max-width: 80vw;
   margin: 0 auto;
+  padding-bottom: 150px;
 }
 .about-s__text-c {
   margin-top: 50px;
@@ -136,6 +137,7 @@ input:checked + .slider:before {
     align-items: center;
     max-width: 80vw;
     margin: 0 auto;
+    padding-bottom: 150px;
   }
 }
 @media (max-width: 600px) {
@@ -145,5 +147,6 @@ input:checked + .slider:before {
     align-items: center;
     max-width: 80vw;
     margin: 0 auto;
+    padding-bottom: 150px;
   }
 }

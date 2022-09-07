@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/aboutMe.css" />
     <link rel="stylesheet" href="./css/card.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <script src="./index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/1ea256a700.js"
       crossorigin="anonymous"
@@ -35,8 +36,12 @@
       </header>
       <section class="body-s__main-s__card-s">
         <div class="card-section__card">
-          <button class="card-section__card__bookmark">
-            <i class="fa-solid fa-bookmark"></i>
+          <button
+            type="button"
+            class="card-section__card__bookmark"
+            data-js="bookmarkButton"
+          >
+            <i class="fa-solid fa-bookmark" data-js-="test"></i>
           </button>
           <div class="card-section__card__question">
             <p>What is the current population size of Germany?</p>
@@ -84,8 +89,12 @@
           </div>
         </div>
         <div class="card-section__card">
-          <button class="card-section__card__bookmark--saved">
-            <i class="fa-solid fa-bookmark"></i>
+          <button
+            type="button"
+            class="card-section__card__bookmark"
+            data-js="bookmarkButton"
+          >
+            <i class="fa-solid fa-bookmark" data-js-="test"></i>
           </button>
           <div class="card-section__card__question">
             <p>What is the current population size of Germany?</p>
@@ -133,8 +142,12 @@
           </div>
         </div>
         <div class="card-section__card">
-          <button class="card-section__card__bookmark">
-            <i class="fa-solid fa-bookmark"></i>
+          <button
+            type="button"
+            class="card-section__card__bookmark"
+            data-js="bookmarkButton"
+          >
+            <i class="fa-solid fa-bookmark" data-js="dead"></i>
           </button>
           <div class="card-section__card__question">
             <p>
@@ -185,6 +198,100 @@
                 >
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <section class="body-s__main-s__createQuiz-s">
+        <div class="body-s__main-s__createQuiz-s__h2Div">
+          <h2>Contribute your own Quiz</h2>
+        </div>
+        <div class="body-s__main-s__createQuiz-s__createQuiz-c">
+          <div class="card-section__card">
+            <button
+              type="button"
+              class="card-section__card__bookmark"
+              data-js="bookmarkButton"
+            >
+              <i class="fa-solid fa-bookmark" data-js="dead"></i>
+            </button>
+            <div class="card-section__card__question">
+              <p data-js="quizQuestion-p">
+                What is the current population size of Germany? (Round to
+                Million)
+              </p>
+            </div>
+            <div class="card-section__card__button--active">
+              <a
+                href="www.google.de"
+                class="card-section__card__button_link--active"
+              >
+                Hide Answer
+              </a>
+            </div>
+            <div class="quizAnswer">
+              <p data-js="quizAnswer-p">83 Million</p>
+            </div>
+            <div class="card-section__card__tags-container">
+              <ul class="card-section__card__tags-container__list">
+                <li>
+                  <a
+                    href="http://lostthecow.com"
+                    class="card-section__card__tags-container__list__item__link yellow"
+                  >
+                    Javascript</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://lostthecow.com"
+                    class="card-section__card__tags-container__list__item__link red"
+                  >
+                    Ruby</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://lostthecow.com"
+                    class="card-section__card__tags-container__list__item__link blue"
+                  >
+                    CSS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://lostthecow.com"
+                    class="card-section__card__tags-container__list__item__link green"
+                  >
+                    HTML</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body-s__main-s__createQuiz-s__createQuiz-c__form">
+            <form class="createCardForm" data-js="createCardForm">
+              <fieldset>
+                <legend>Do you have the ULTIMATE Question?</legend>
+                <label for="quizQuestion">Question here:</label>
+                <input
+                  type="text"
+                  name="quizQuestion"
+                  id="quizQuestion"
+                  required
+                  data-js="quizQuestionInput"
+                />
+                <label for="quizAnswer">Answer here:</label>
+                <textarea
+                  name="quizAnswer"
+                  id="quizAnswer"
+                  cols="30"
+                  rows="3"
+                  required
+                  data-js="quizAnswerInput"
+                ></textarea>
+                <button type="submit">Contribute</button>
+              </fieldset>
+            </form>
           </div>
         </div>
       </section>
