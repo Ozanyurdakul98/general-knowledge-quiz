@@ -34,7 +34,11 @@
           <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
         </div>
       </header>
-      <section class="body-s__main-s__card-s" data-js="cardsSection">
+      <section
+        class="body-s__main-s__card-s"
+        id="wrapper"
+        data-js="cardsSection"
+      >
         <div class="card-section__card">
           <button
             type="button"
@@ -47,9 +51,19 @@
             <p>What is the current population size of Germany?</p>
           </div>
           <div class="card-section__card__button">
-            <a href="www.google.de" class="card-section__card__button__link">
+            <button
+              class="card-section__card__button__link button"
+              data-js="buttonShowAnswer"
+            >
               Show Answer
-            </a>
+            </button>
+            <div class="quizAnswer hideAnswer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dolor facere laboriosam omnis, molestias quibusdam
+                id optio perspiciatis praesentium inventore.
+              </p>
+            </div>
           </div>
           <div class="card-section__card__tags-container">
             <ul class="card-section__card__tags-container__list">
@@ -100,9 +114,13 @@
             <p>What is the current population size of Germany?</p>
           </div>
           <div class="card-section__card__button">
-            <a href="www.google.de" class="card-section__card__button__link">
+            <button
+              class="card-section__card__button__link button"
+              data-js="buttonShowAnswer"
+            >
               Show Answer
-            </a>
+            </button>
+            <div class="quizAnswer hideAnswer"><p>83 Million</p></div>
           </div>
           <div class="card-section__card__tags-container">
             <ul class="card-section__card__tags-container__list">
@@ -154,15 +172,15 @@
               What is the current population size of Germany? (Round to Million)
             </p>
           </div>
-          <div class="card-section__card__button--active">
-            <a
-              href="www.google.de"
-              class="card-section__card__button_link--active"
+          <div class="card-section__card__button">
+            <button
+              class="card-section__card__button__link"
+              data-js="buttonShowAnswer"
             >
-              Hide Answer
-            </a>
+              Show Answer
+            </button>
           </div>
-          <div class="quizAnswer"><p>83 Million</p></div>
+          <div class="quizAnswer hideAnswer"><p>83 Million</p></div>
           <div class="card-section__card__tags-container">
             <ul class="card-section__card__tags-container__list">
               <li>
@@ -217,14 +235,12 @@
             <div class="card-section__card__question">
               <p data-js="quizQuestion-p">Your Question will be here</p>
             </div>
-            <div class="card-section__card__button--active">
-              <a
-                href="www.google.de"
-                class="card-section__card__button_link--active"
-              >
-                Hide Answer
-              </a>
-            </div>
+            <button
+              class="card-section__card__button__link button"
+              data-js="buttonShowAnswer"
+            >
+              Show Answer
+            </button>
             <div class="quizAnswer">
               <p data-js="quizAnswer-p">Your Answer will be here</p>
             </div>
@@ -272,7 +288,7 @@
           <div class="body-s__main-s__createQuiz-s__createQuiz-c__form">
             <form class="createCardForm" data-js="createCardForm">
               <fieldset>
-                <legend>Do you have the ULTIMATE Question?</legend>
+                <legend>Do you have a good Question?</legend>
                 <label for="quizQuestion">Question here:</label>
                 <input
                   type="text"
@@ -280,57 +296,77 @@
                   id="quizQuestion"
                   minlength="20"
                   maxlength="135"
+                  placeholder="Your Question goes here"
                   required
                   data-js="quizQuestionInput"
                 />
                 <label for="quizAnswer">Answer here:</label>
                 <textarea
+                  type="text"
                   name="quizAnswer"
                   id="quizAnswer"
                   cols="30"
                   rows="3"
                   minlength="25"
                   maxlength="200"
-                  placeholder="TestTest"
+                  placeholder="Your Answer goes here"
                   required
                   data-js="quizAnswerInput"
                 ></textarea>
-                <label for="newTag">Tag 1:</label>
-                <input
-                  type="text"
-                  name="newTag"
-                  id="newTag"
-                  minlength="2"
-                  maxlength="15"
-                  data-js="newTagInput"
-                />
-                <label for="newTag2">Tag 2:</label>
-                <input
-                  type="text"
-                  name="newTag2"
-                  id="newTag2"
-                  minlength="2"
-                  maxlength="15"
-                  data-js="newTagInput2"
-                />
-                <label for="newTag">Tag 3:</label>
-                <input
-                  type="text"
-                  name="newTag3"
-                  id="newTag3"
-                  minlength="2"
-                  maxlength="15"
-                  data-js="newTagInput3"
-                />
-                <label for="newTag">Tag 4:</label>
-                <input
-                  type="text"
-                  name="newTag4"
-                  id="newTag4"
-                  minlength="2"
-                  maxlength="15"
-                  data-js="newTagInput4"
-                />
+                <fieldset class="tagFieldset">
+                  <div>
+                    <label for="newTag">1.</label>
+                    <input
+                      type="text"
+                      name="newTag"
+                      id="newTag"
+                      minlength="2"
+                      maxlength="15"
+                      placeholder="Tag#1 here"
+                      class="formTag"
+                      data-js="newTagInput"
+                    />
+                  </div>
+                  <div>
+                    <label for="newTag2">2.</label>
+                    <input
+                      type="text"
+                      name="newTag2"
+                      id="newTag2"
+                      minlength="2"
+                      maxlength="15"
+                      placeholder="Tag#2 here"
+                      class="formTag"
+                      data-js="newTagInput2"
+                    />
+                  </div>
+                  <div>
+                    <label for="newTag">3.</label>
+                    <input
+                      type="text"
+                      name="newTag3"
+                      id="newTag3"
+                      minlength="2"
+                      maxlength="15"
+                      placeholder="Tag#3 here"
+                      class="formTag"
+                      data-js="newTagInput3"
+                    />
+                  </div>
+                  <div>
+                    <label for="newTag">4.</label>
+                    <input
+                      type="text"
+                      name="newTag4"
+                      id="newTag4"
+                      minlength="2"
+                      maxlength="15"
+                      placeholder="Tag#4 here"
+                      class="formTag"
+                      data-js="newTagInput4"
+                    />
+                  </div>
+                </fieldset>
                 <button type="submit">Contribute</button>
               </fieldset>
             </form>

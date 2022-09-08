@@ -61,6 +61,7 @@ newTagInput3.addEventListener("input", () => {
 newTagInput4.addEventListener("input", () => {
   tag_a4.textContent = newTagInput4.value;
 });
+// ____________________Add-Form-Card_______________________
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -78,3 +79,78 @@ form.addEventListener("submit", (event) => {
   //
   console.log("contributed");
 });
+//
+//
+//
+// ____________________ShowAnswerHideAnswer_______________________
+const buttonShowAnswer = document.querySelectorAll(
+  '[data-js="buttonShowAnswer"]'
+);
+const buttonShowText = " Show Answer";
+const answerCard = document.querySelector(".hideAnswer");
+const CardSectionWrapper = document.getElementById("wrapper");
+
+CardSectionWrapper.addEventListener("click", (event) => {
+  const isButton = event.target.nodeName === "BUTTON";
+  console.log(event.target.parentNode);
+  if (!isButton) {
+    return;
+    //
+  } else if (
+    event.target.textContent !== "Hide Answer" &&
+    event.target.parentNode
+      .querySelector(".quizAnswer")
+      .classList.contains("quizAnswer")
+  ) {
+    event.target.textContent = "Hide Answer";
+    event.target.parentNode
+      .querySelector(".quizAnswer")
+      .classList.remove("hideAnswer");
+    //
+  } else if (event.target.textContent === "Hide Answer") {
+    event.target.textContent = "Show Answer";
+    event.target.parentNode
+      .querySelector(".quizAnswer")
+      .classList.add("hideAnswer");
+    //
+    console.log("changing to show answer if text is hide");
+  } else if (event.target.parentNode.querySelector(".quizAnswer")) {
+    e.target.parentNode.querySelector(".quizAnswer").classList.add("Example");
+  } else if (
+    event.target.parentNode
+      .querySelector(".quizAnswer")
+      .classList.contains(".quizAnswer")
+  ) {
+    console.log("true");
+  } else {
+    e.target.parentNode.style.background = "white";
+  }
+  console.log(
+    "log: ",
+    event.target.parentNode
+      .querySelector(".quizAnswer")
+      .classList.contains("quizAnswer")
+  );
+});
+
+// function test() {
+//   console.log("test accepted");
+// }
+
+// if (document.querySelector(".button")) {
+//   // select all buttons, each as el
+//   document.querySelectorAll(".button").forEach(function (el) {
+//     // bind click event to each el
+//     el.addEventListener("click", function (e) {
+//       // check also if there is at least on .childelement
+//       // e.target is the clicked element, parentNode the parent, from there find .childElement
+//       if (e.target.parentNode.querySelector(".quizAnswer")) {
+//         e.target.parentNode
+//           .querySelector(".quizAnswer")
+//           .classList.add("Example");
+//       } else {
+//         e.target.parentNode.style.background = "white";
+//       }
+//     });
+//   });
+// }

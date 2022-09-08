@@ -31,8 +31,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 100px;
+  min-height: 100vh;
 }
 @media screen and (max-width: 480px) {
   .body-s__main-s__card-s {
