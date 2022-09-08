@@ -34,7 +34,7 @@
           <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
         </div>
       </header>
-      <section class="body-s__main-s__card-s">
+      <section class="body-s__main-s__card-s" data-js="cardsSection">
         <div class="card-section__card">
           <button
             type="button"
@@ -206,7 +206,7 @@
           <h2>Contribute your own Quiz</h2>
         </div>
         <div class="body-s__main-s__createQuiz-s__createQuiz-c">
-          <div class="card-section__card">
+          <div class="card-section__card" data-js="createdCard">
             <button
               type="button"
               class="card-section__card__bookmark"
@@ -215,10 +215,7 @@
               <i class="fa-solid fa-bookmark" data-js="dead"></i>
             </button>
             <div class="card-section__card__question">
-              <p data-js="quizQuestion-p">
-                What is the current population size of Germany? (Round to
-                Million)
-              </p>
+              <p data-js="quizQuestion-p">Your Question will be here</p>
             </div>
             <div class="card-section__card__button--active">
               <a
@@ -229,7 +226,7 @@
               </a>
             </div>
             <div class="quizAnswer">
-              <p data-js="quizAnswer-p">83 Million</p>
+              <p data-js="quizAnswer-p">Your Answer will be here</p>
             </div>
             <div class="card-section__card__tags-container">
               <ul class="card-section__card__tags-container__list">
@@ -237,6 +234,7 @@
                   <a
                     href="http://lostthecow.com"
                     class="card-section__card__tags-container__list__item__link yellow"
+                    data-js="tagA"
                   >
                     Javascript</a
                   >
@@ -245,6 +243,7 @@
                   <a
                     href="http://lostthecow.com"
                     class="card-section__card__tags-container__list__item__link red"
+                    data-js="tagA2"
                   >
                     Ruby</a
                   >
@@ -253,6 +252,7 @@
                   <a
                     href="http://lostthecow.com"
                     class="card-section__card__tags-container__list__item__link blue"
+                    data-js="tagA3"
                   >
                     CSS</a
                   >
@@ -261,6 +261,7 @@
                   <a
                     href="http://lostthecow.com"
                     class="card-section__card__tags-container__list__item__link green"
+                    data-js="tagA4"
                   >
                     HTML</a
                   >
@@ -277,6 +278,8 @@
                   type="text"
                   name="quizQuestion"
                   id="quizQuestion"
+                  minlength="20"
+                  maxlength="135"
                   required
                   data-js="quizQuestionInput"
                 />
@@ -286,9 +289,48 @@
                   id="quizAnswer"
                   cols="30"
                   rows="3"
+                  minlength="25"
+                  maxlength="200"
+                  placeholder="TestTest"
                   required
                   data-js="quizAnswerInput"
                 ></textarea>
+                <label for="newTag">Tag 1:</label>
+                <input
+                  type="text"
+                  name="newTag"
+                  id="newTag"
+                  minlength="2"
+                  maxlength="15"
+                  data-js="newTagInput"
+                />
+                <label for="newTag2">Tag 2:</label>
+                <input
+                  type="text"
+                  name="newTag2"
+                  id="newTag2"
+                  minlength="2"
+                  maxlength="15"
+                  data-js="newTagInput2"
+                />
+                <label for="newTag">Tag 3:</label>
+                <input
+                  type="text"
+                  name="newTag3"
+                  id="newTag3"
+                  minlength="2"
+                  maxlength="15"
+                  data-js="newTagInput3"
+                />
+                <label for="newTag">Tag 4:</label>
+                <input
+                  type="text"
+                  name="newTag4"
+                  id="newTag4"
+                  minlength="2"
+                  maxlength="15"
+                  data-js="newTagInput4"
+                />
                 <button type="submit">Contribute</button>
               </fieldset>
             </form>

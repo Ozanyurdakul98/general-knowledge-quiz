@@ -40,6 +40,9 @@
   color: #00ffff;
   background-color: transparent;
 }
+.card-section__card__bookmark:hover {
+  cursor: pointer;
+}
 .card-section__card__bookmark--saved {
   color: #d40000;
 }
@@ -92,7 +95,6 @@
   align-items: center;
   background-color: #f4d7d7;
   width: 70%;
-  height: 150px;
   margin: 10px 0;
   padding: 10px;
 }
