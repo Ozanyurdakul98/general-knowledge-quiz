@@ -29,6 +29,7 @@ body {
 .body-s__main-s__card-s {
   display: flex;
   flex-direction: row;
+  align-content: space-evenly;
   flex-wrap: wrap;
   justify-content: space-evenly;
   min-height: 100vh;
