@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>That's My Quiz</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./css/aboutMe.css" />
-    <link rel="stylesheet" href="./css/card.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./components/bookmark/bookmark.css" />
+    <script
+      src="./components/bookmark/bookmark.js"
+      type="module"
+      defer
+    ></script>
     <script
       src="https://kit.fontawesome.com/1ea256a700.js"
       crossorigin="anonymous"
@@ -34,18 +36,36 @@
           <img src="./images/Zeichnung-cropped.svg" class="header__logo__img" />
         </div>
       </header>
-      <section class="body-s__main-s__card-s">
+      <section
+        class="body-s__main-s__card-s"
+        id="wrapper"
+        data-js="cardsSection"
+      >
         <div class="card-section__card">
-          <button class="card-section__card__bookmark--saved">
-            <i class="fa-solid fa-bookmark"></i>
+          <button
+            type="button"
+            class="card-section__card__bookmark"
+            data-js="bookmarkButton"
+          >
+            <i class="fa-solid fa-bookmark" data-js-="test"></i>
           </button>
           <div class="card-section__card__question">
             <p>What is the current population size of Germany?</p>
           </div>
           <div class="card-section__card__button">
-            <a href="www.google.de" class="card-section__card__button__link">
+            <button
+              class="card-section__card__button__link button"
+              data-js="buttonShowAnswer"
+            >
               Show Answer
-            </a>
+            </button>
+            <div class="quizAnswer hideAnswer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dolor facere laboriosam omnis, molestias quibusdam
+                id optio perspiciatis praesentium inventore.
+              </p>
+            </div>
           </div>
           <div class="card-section__card__tags-container">
             <ul class="card-section__card__tags-container__list">
@@ -85,16 +105,24 @@
           </div>
         </div>
         <div class="card-section__card">
-          <button class="card-section__card__bookmark--saved">
-            <i class="fa-solid fa-bookmark"></i>
+          <button
+            type="button"
+            class="card-section__card__bookmark"
+            data-js="bookmarkButton"
+          >
+            <i class="fa-solid fa-bookmark" data-js-="test"></i>
           </button>
           <div class="card-section__card__question">
             <p>What is the current population size of Germany?</p>
           </div>
           <div class="card-section__card__button">
-            <a href="www.google.de" class="card-section__card__button__link">
+            <button
+              class="card-section__card__button__link button"
+              data-js="buttonShowAnswer"
+            >
               Show Answer
-            </a>
+            </button>
+            <div class="quizAnswer hideAnswer"><p>83 Million</p></div>
           </div>
           <div class="card-section__card__tags-container">
             <ul class="card-section__card__tags-container__list">

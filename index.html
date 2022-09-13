@@ -7,9 +7,8 @@
     <title>That's My Quiz</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./css/aboutMe.css" />
-    <link rel="stylesheet" href="./css/card.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <script src="./index.js" defer></script>
+    <script type="module" src="./index.js" defer></script>
+    <script src="./components/card/addCard.js" type="module" defer></script>
     <script
       src="https://kit.fontawesome.com/1ea256a700.js"
       crossorigin="anonymous"
@@ -295,11 +294,14 @@
                   name="quizQuestion"
                   id="quizQuestion"
                   minlength="20"
-                  maxlength="135"
+                  maxlength="150"
                   placeholder="Your Question goes here"
                   required
                   data-js="quizQuestionInput"
                 />
+                <p data-js="question-counter" class="form__counter">
+                  150 characters left
+                </p>
                 <label for="quizAnswer">Answer here:</label>
                 <textarea
                   type="text"
@@ -313,6 +315,9 @@
                   required
                   data-js="quizAnswerInput"
                 ></textarea>
+                <p data-js="answer-counter" class="form__counter">
+                  200 characters left
+                </p>
                 <fieldset class="tagFieldset">
                   <div>
                     <label for="newTag">1.</label>

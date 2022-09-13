@@ -1,3 +1,6 @@
+@import url(./components/bookmark/bookmark.css);
+@import url(./components/card/card.css);
+@import url(./components/header/header.css);
 /* * + * {
   margin: 1em 0 0;
 } */
@@ -25,6 +28,7 @@ body {
 }
 .body-s__main-s {
   overflow-y: scroll;
+  padding-bottom: 150px;
 }
 .body-s__main-s__card-s {
   display: flex;
@@ -32,6 +36,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
   min-height: 100vh;
+  gap: 15px;
+  padding-bottom: 150px;
 }
 @media screen and (max-width: 480px) {
   .body-s__main-s__card-s {

@@ -11,7 +11,7 @@
       rgba(247, 247, 245, 0.5),
       rgba(245, 245, 249, 0.704)
     ),
-    url("../images/Zeichnung-cropped.svg");
+    url("../../images/Zeichnung-cropped.svg");
   background-size: 90px;
   background-clip: content-box;
   background-repeat: repeat;
@@ -35,7 +35,7 @@
       rgba(247, 247, 245, 0.5),
       rgba(245, 245, 249, 0.704)
     ),
-    url("../images/Zeichnung-cropped.svg");
+    url("../../images/Zeichnung-cropped.svg");
   background-size: 30px;
   background-clip: content-box;
   background-repeat: repeat;

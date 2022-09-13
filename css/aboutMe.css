@@ -49,6 +49,21 @@
 .about-s__text-c--paragraph2 {
   padding-top: 20px;
 }
+.counter-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.counter-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70px;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 4px;
+}
 
 /* The switch - the box around the slider */
 .switch {
@@ -130,6 +145,7 @@ input:checked + .slider:before {
   align-items: center;
   gap: 30px;
 }
+
 @media (max-width: 1024px) {
   .about-s {
     display: flex;

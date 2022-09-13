@@ -17,31 +17,10 @@
       rgba(245, 245, 249, 0.704),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../images/Zeichnung-cropped.svg");
+    url("../../images/Zeichnung-cropped.svg");
   background-size: 300px;
   background-clip: content-box;
   background-repeat: repeat;
-}
-.card-section__card__bookmark {
-  position: absolute;
-  right: -18px;
-  top: -20px;
-  z-index: 10;
-  padding: 0;
-  border: none;
-  font-size: 50px;
-  color: #00ffff;
-  background-color: transparent;
-  transition: all 90ms ease-in-out;
-}
-.card-section__card__bookmark:active {
-  scale: 1.3;
-}
-.card-section__card__bookmark--saved {
-  color: #d40000;
-}
-.card-section__card__bookmark:hover {
-  cursor: pointer;
 }
 
 .card-section__card__question {
@@ -154,7 +133,6 @@
 .body-s__main-s__createQuiz-s {
   display: flex;
   flex-direction: column;
-  padding-bottom: 150px;
 }
 .body-s__main-s__createQuiz-s__createQuiz-c {
   display: flex;
@@ -177,7 +155,7 @@
       rgb(245, 245, 249),
       rgba(241, 237, 237, 0.721)
     ),
-    url("../images/Zeichnung-cropped.svg");
+    url("../../images/Zeichnung-cropped.svg");
   background-size: 200px;
   background-clip: content-box;
   background-repeat: repeat;
