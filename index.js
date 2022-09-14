@@ -7,21 +7,37 @@ const cards = [
     question: "Question 1",
     answer: "Answer 1",
     tag: "Tag 1",
+    tag2: "Tag 1",
+    tag3: "Tag 1",
+    tag4: "Tag 1",
   },
   {
     question: "Question 2",
     answer: "Answer 2",
-    tag: "Tag 2",
+    tag: "Tag 1",
+    tag2: "Tag 1",
+    tag3: "Tag 1",
+    tag4: "Tag 1",
   },
   {
     question: "Question 3",
     answer: "Answer 3",
-    tag: "Tag 3",
+    tag: "Tag 1",
+    tag2: "Tag 1",
+    tag3: "Tag 1",
+    tag4: "Tag 1",
   },
 ];
 
 cards.forEach((card) => {
-  const cardElement = createCard(card.question, card.answer, card.tag);
+  const cardElement = createCard(
+    card.question,
+    card.answer,
+    card.tag,
+    card.tag2,
+    card.tag3,
+    card.tag4
+  );
   cardSection.append(cardElement);
 });
 

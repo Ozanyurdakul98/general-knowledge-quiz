@@ -1,16 +1,16 @@
 import createCard from "./card.js";
 
 // ______________________BookmarkButton_________________________
-const allBookmarkButtons = document.querySelectorAll(
-  '[data-js="bookmarkButton"]'
-);
+// const allBookmarkButtons = document.querySelectorAll(
+//   '[data-js="bookmarkButton"]'
+// );
 
-allBookmarkButtons.forEach((element) =>
-  element.addEventListener("click", (event) => {
-    const buttonElement = event.target;
-    buttonElement.classList.toggle("card-section__card__bookmark--saved");
-  })
-);
+// allBookmarkButtons.forEach((element) =>
+//   element.addEventListener("click", (event) => {
+//     const buttonElement = event.target;
+//     buttonElement.classList.toggle("card-section__card__bookmark--saved");
+//   })
+// );
 // ____________________cardForm_______________________
 const form = document.querySelector('[data-js="createCardForm"]');
 const quizAnswer_p = document.querySelector('[data-js="quizAnswer-p"]');

@@ -58,10 +58,17 @@ function createCard(question, answer, tag, tag2, tag3, tag4) {
             >
             ${tag4}</a
             >
-          </li>
-        </ul>
-        </div>`;
+            </li>
+            </ul>
+            </div>`;
+  //
 
+  console.log("ausgeführt");
+  const BookmarkButtons = card.querySelector('[data-js="bookmarkButton"]');
+
+  BookmarkButtons.addEventListener("click", () => {
+    BookmarkButtons.classList.toggle("card-section__card__bookmark--saved");
+  });
   return card;
 }
 export default createCard;
