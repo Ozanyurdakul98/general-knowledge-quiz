@@ -75,16 +75,6 @@
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.quizAnswer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4d7d7;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-}
 
 /* CARD TAGS SECTION */
 .card-section__card__tags-container {
@@ -181,14 +171,23 @@ legend {
   color: orangered;
 }
 /* _____________________HideShowAnswerButton__________________________*/
-
 .quizAnswer {
   background-color: #ffff00;
-}
-.hideAnswer {
   display: none;
   box-shadow: none;
 }
+.quizAnswer--active {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4d7d7;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
 .formTag {
   width: 80%;
 }

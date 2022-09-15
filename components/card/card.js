@@ -30,7 +30,7 @@ function createCard(
         >
           Show Answer
         </button>
-        <div class="quizAnswer hideAnswer">
+        <div class="quizAnswer" data-js="quizAnswer">
           <p>
         ${answer}
           </p>
@@ -81,14 +81,23 @@ function createCard(
   const BookmarkButtons = card.querySelector('[data-js="bookmarkButton"]');
 
   answerButton.addEventListener("click", () => {
-    if (answerElement.classList.contains("quizAnswer")) {
-      answerElement.classList.remove("hideAnswer");
-      answerButton.textContent = "Show answer";
+    if (answerElement.classList.contains("quizAnswer--active")) {
+      answerElement.classList.remove("quizAnswer--active");
+      answerButton.textContent = "Show Answer";
     } else {
-      answerElement.classList.add("quizAnswer");
-      answerButton.textContent = "Hide answer";
+      answerElement.classList.add("quizAnswer--active");
+      answerButton.textContent = "Show Answer";
     }
   });
+  // answerButton.addEventListener("click", () => {
+  //   if (answerElement.classList.contains("card__answer--active")) {
+  //     answerElement.classList.remove("card__answer--active");
+  //     answerButton.textContent = "Show answer";
+  //   } else {
+  //     answerElement.classList.add("card__answer--active");
+  //     answerButton.textContent = "Hide answer";
+  //   }
+  // });
 
   BookmarkButtons.addEventListener("click", () => {
     BookmarkButtons.classList.toggle("card-section__card__bookmark--saved");

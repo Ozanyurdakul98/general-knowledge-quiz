@@ -68,7 +68,7 @@ form.addEventListener("submit", (event) => {
 });
 
 // // ____________________ShowAnswerHideAnswer_______________________
-// const CardSectionWrapper = document.getElementById("wrapper");
+const CardSectionWrapper = document.getElementById("wrapper");
 
 // CardSectionWrapper.addEventListener("click", (event) => {
 //   const isButton = event.target.nodeName === "BUTTON";
