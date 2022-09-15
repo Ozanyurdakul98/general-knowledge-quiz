@@ -1,33 +1,17 @@
 import createCard from "./components/card/card.js";
+import { loadCards, saveCards } from "./utilities/localstorage.js";
 
 const cardSection = document.querySelector('[data-js="cardsSection"]');
 
-const cards = [
-  {
-    question: "Question 1",
-    answer: "Answer 1",
-    tag: "Tag 1",
-    tag2: "Tag 1",
-    tag3: "Tag 1",
-    tag4: "Tag 1",
-  },
-  {
-    question: "Question 2",
-    answer: "Answer 2",
-    tag: "Tag 1",
-    tag2: "Tag 1",
-    tag3: "Tag 1",
-    tag4: "Tag 1",
-  },
-  {
-    question: "Question 3",
-    answer: "Answer 3",
-    tag: "Tag 1",
-    tag2: "Tag 1",
-    tag3: "Tag 1",
-    tag4: "Tag 1",
-  },
-];
+let cards = loadCards();
+
+function toggleBookmark(id) {
+  const toggledCardArray = cards.map((card) =>
+    card.id === id ? { ...card, bookmarked: !card.bookmarked } : card
+  );
+  cards = toggledCardArray;
+  saveCards(toggledCardArray);
+}
 
 cards.forEach((card) => {
   const cardElement = createCard(
@@ -36,7 +20,9 @@ cards.forEach((card) => {
     card.tag,
     card.tag2,
     card.tag3,
-    card.tag4
+    card.tag4,
+    card.bookmarked,
+    () => toggleBookmark(card.id)
   );
   cardSection.append(cardElement);
 });

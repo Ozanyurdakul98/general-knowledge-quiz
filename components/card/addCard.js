@@ -1,16 +1,6 @@
 import createCard from "./card.js";
+import { loadCards, saveCards } from "../../utilities/localstorage.js";
 
-// ______________________BookmarkButton_________________________
-// const allBookmarkButtons = document.querySelectorAll(
-//   '[data-js="bookmarkButton"]'
-// );
-
-// allBookmarkButtons.forEach((element) =>
-//   element.addEventListener("click", (event) => {
-//     const buttonElement = event.target;
-//     buttonElement.classList.toggle("card-section__card__bookmark--saved");
-//   })
-// );
 // ____________________cardForm_______________________
 const form = document.querySelector('[data-js="createCardForm"]');
 const quizAnswer_p = document.querySelector('[data-js="quizAnswer-p"]');
@@ -54,56 +44,62 @@ form.addEventListener("submit", (event) => {
   // cardsSection.append(createdCard.cloneNode(true));
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
-  const newCard = createCard(
-    data.quizQuestion,
-    data.quizAnswer,
-    data.newTag,
-    data.newTag2,
-    data.newTag3,
-    data.newTag4
-  );
-  cardsSection.append(newCard);
 
-  event.preventDefault();
+  const newCard = {
+    id: Math.random() + "",
+    question: data.quizQuestion,
+    answer: data.quizAnswer,
+    tag: data.newTag,
+    tag2: data.newTag2,
+    tag3: data.newTag3,
+    tag4: data.newTag4,
+    bookmarked: false,
+  };
+  console.log("submitted");
+  const cards = loadCards();
+  cards.push(newCard);
+  saveCards(cards);
+  alert("New Card created!");
+
   form.reset();
   form.quizQuestion.focus();
   //  for (var [key, value] of formData.entries()) {
   //   console.log(key, value);}
 });
-//
-// ____________________ShowAnswerHideAnswer_______________________
-const CardSectionWrapper = document.getElementById("wrapper");
 
-CardSectionWrapper.addEventListener("click", (event) => {
-  const isButton = event.target.nodeName === "BUTTON";
-  if (!isButton) {
-    return;
-    //
-  } else if (
-    event.target.textContent !== "Hide Answer" &&
-    event.target.parentNode
-      .querySelector(".quizAnswer")
-      .classList.contains("quizAnswer")
-  ) {
-    event.target.textContent = "Hide Answer";
-    event.target.parentNode
-      .querySelector(".quizAnswer")
-      .classList.remove("hideAnswer");
-    //
-  } else if (event.target.textContent === "Hide Answer") {
-    event.target.textContent = "Show Answer";
-    event.target.parentNode
-      .querySelector(".quizAnswer")
-      .classList.add("hideAnswer");
-    //
-  } else if (event.target.parentNode.querySelector(".quizAnswer")) {
-    e.target.parentNode.querySelector(".quizAnswer").classList.add("Example");
-  } else if (
-    event.target.parentNode
-      .querySelector(".quizAnswer")
-      .classList.contains(".quizAnswer")
-  ) {
-  } else {
-    e.target.parentNode.style.background = "white";
-  }
-});
+// // ____________________ShowAnswerHideAnswer_______________________
+// const CardSectionWrapper = document.getElementById("wrapper");
+
+// CardSectionWrapper.addEventListener("click", (event) => {
+//   const isButton = event.target.nodeName === "BUTTON";
+//   if (!isButton) {
+//     return;
+//     //
+//   } else if (
+//     event.target.textContent !== "Hide Answer" &&
+//     event.target.parentNode
+//       .querySelector(".quizAnswer")
+//       .classList.contains("quizAnswer")
+//   ) {
+//     event.target.textContent = "Hide Answer";
+//     event.target.parentNode
+//       .querySelector(".quizAnswer")
+//       .classList.remove("hideAnswer");
+//     //
+//   } else if (event.target.textContent === "Hide Answer") {
+//     event.target.textContent = "Show Answer";
+//     event.target.parentNode
+//       .querySelector(".quizAnswer")
+//       .classList.add("hideAnswer");
+//     //
+//   } else if (event.target.parentNode.querySelector(".quizAnswer")) {
+//     e.target.parentNode.querySelector(".quizAnswer").classList.add("Example");
+//   } else if (
+//     event.target.parentNode
+//       .querySelector(".quizAnswer")
+//       .classList.contains(".quizAnswer")
+//   ) {
+//   } else {
+//     e.target.parentNode.style.background = "white";
+//   }
+// });

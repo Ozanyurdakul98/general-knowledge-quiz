@@ -1,10 +1,21 @@
-function createCard(question, answer, tag, tag2, tag3, tag4) {
+function createCard(
+  question,
+  answer,
+  tag,
+  tag2,
+  tag3,
+  tag4,
+  bookmarked,
+  bookmarkCallback
+) {
   const card = document.createElement("div");
   card.classList.add("card-section__card");
   card.innerHTML = `
         <button
         type="button"
-        class="card-section__card__bookmark"
+        class="card-section__card__bookmark ${
+          bookmarked ? "card-section__card__bookmark--saved" : ""
+        }"
             data-js="bookmarkButton"
         >
             <i class="fa-solid fa-bookmark" data-js-="test"></i>
@@ -64,10 +75,24 @@ function createCard(question, answer, tag, tag2, tag3, tag4) {
   //
 
   console.log("ausgeführt");
+
+  const answerButton = card.querySelector('[data-js="buttonShowAnswer"]');
+  const answerElement = card.querySelector('[data-js="quizAnswer"]');
   const BookmarkButtons = card.querySelector('[data-js="bookmarkButton"]');
+
+  answerButton.addEventListener("click", () => {
+    if (answerElement.classList.contains("quizAnswer")) {
+      answerElement.classList.remove("hideAnswer");
+      answerButton.textContent = "Show answer";
+    } else {
+      answerElement.classList.add("quizAnswer");
+      answerButton.textContent = "Hide answer";
+    }
+  });
 
   BookmarkButtons.addEventListener("click", () => {
     BookmarkButtons.classList.toggle("card-section__card__bookmark--saved");
+    bookmarkCallback();
   });
   return card;
 }
