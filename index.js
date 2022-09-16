@@ -2,7 +2,32 @@ import createCard from "./components/card/card.js";
 import { loadCards, saveCards } from "./utilities/localstorage.js";
 
 const cardSection = document.querySelector('[data-js="cardsSection"]');
-
+const cardss = [
+  {
+    question: "What is the population size of Germany?",
+    answer: "84 million people",
+    tag: "country",
+    tag2: "people",
+    tag3: "population",
+    tag4: "geography",
+  },
+  {
+    question: "What is the population size of Turkey?",
+    answer: "85 million people",
+    tag: "country",
+    tag2: "people",
+    tag3: "population",
+    tag4: "geography",
+  },
+  {
+    question: "What is the population size of Russia?",
+    answer: "145 million people",
+    tag: "country",
+    tag2: "people",
+    tag3: "population",
+    tag4: "geography",
+  },
+];
 let cards = loadCards();
 
 function toggleBookmark(id) {
@@ -14,6 +39,19 @@ function toggleBookmark(id) {
 }
 
 cards.forEach((card) => {
+  const cardElement = createCard(
+    card.question,
+    card.answer,
+    card.tag,
+    card.tag2,
+    card.tag3,
+    card.tag4,
+    card.bookmarked,
+    () => toggleBookmark(card.id)
+  );
+  cardSection.append(cardElement);
+});
+cardss.forEach((card) => {
   const cardElement = createCard(
     card.question,
     card.answer,
