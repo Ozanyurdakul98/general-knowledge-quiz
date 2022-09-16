@@ -40,7 +40,6 @@ function createCard(
             <ul class="card-section__card__tags-container__list">
           <li>
             <a
-              href="http://lostthecow.com"
               class="card-section__card__tags-container__list__item__link yellow"
             >
               ${tag}</a
@@ -48,7 +47,6 @@ function createCard(
           </li>
           <li>
             <a
-              href="http://lostthecow.com"
               class="card-section__card__tags-container__list__item__link red"
             >
             ${tag2}</a
@@ -56,7 +54,6 @@ function createCard(
           </li>
           <li>
             <a
-              href="http://lostthecow.com"
               class="card-section__card__tags-container__list__item__link blue"
             >
             ${tag3}</a
@@ -64,8 +61,7 @@ function createCard(
           </li>
           <li>
             <a
-              href="http://lostthecow.com"
-              class="card-section__card__tags-container__list__item__link green"
+            class="card-section__card__tags-container__list__item__link green"
             >
             ${tag4}</a
             >
