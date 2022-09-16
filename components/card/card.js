@@ -86,7 +86,7 @@ function createCard(
       answerButton.textContent = "Show Answer";
     } else {
       answerElement.classList.add("quizAnswer--active");
-      answerButton.textContent = "Show Answer";
+      answerButton.textContent = "Hide Answer";
     }
   });
   // answerButton.addEventListener("click", () => {
