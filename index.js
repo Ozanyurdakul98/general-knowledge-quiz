@@ -4,6 +4,7 @@ import { loadCards, saveCards } from "./utilities/localstorage.js";
 const cardSection = document.querySelector('[data-js="cardsSection"]');
 const cardss = [
   {
+    id: 1,
     question: "What is the population size of Germany?",
     answer: "84 million people",
     tag: "country",
