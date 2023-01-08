@@ -1,13 +1,14 @@
 # general-knowledge-quiz App
 
+Live Link: <a href="https://ozanyurdakul98.github.io/general-knowledge-quiz/">Click here</a>
 "That's My Quiz" is a Web App, were you can create, solve and also bookmark your favorite Quiz's.
 
 ## Overall
-
-<div><img src="./assets/readmeFile/readmeBEM1.png" width=50% align="middle"></div>
-
-As you can see the Structure of styling and folders follows
+styling and folders follows
 <a href="http://getbem.com/introduction">BEM</a>.
+
+-Javascript, Css, Html
+
 
 <!-- this is why the CSS files are organized according to their corresponding component. -->
 
